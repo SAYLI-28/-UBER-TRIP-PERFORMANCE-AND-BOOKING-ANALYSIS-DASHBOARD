@@ -1,33 +1,176 @@
-# -UBER-TRIP-PERFORMANCE-AND-BOOKING-ANALYSIS-DASHBOARD
- UBER-TRIP PERFORMANCE AND BOOKING ANALYSIS-DASHBOARD
-DASHBOARD 1: OVERVIEW ANALYSIS
-Analyse Uber trip data using Power BI to gain insights into booking trends, revenue, and trip efficiency, helping stakeholders make data-driven decisions. KPI’s Total Bookings – How many trips were booked over a given period? Total Booking Value – What is the total revenue generated from all bookings? Average Booking Value – What is the average revenue per booking? Total Trip Distance – What is the total distance covered by all trips? Average Trip Distance – How far are customers traveling on average per trip? Average Trip Time – What is the average duration of trips? Expected Outcomes: ✔ Identify trends in ride bookings and revenue generation. ✔ Analyse trip efficiency in terms of distance and duration. ✔ Compare booking values and trip patterns across different time periods. ✔ Provide insights to optimize pricing models and improve customer satisfaction.
+# 🚗 Uber Trip Performance & Booking Analytics Dashboard
 
-CHART’s Create a Measure Selector using a Disconnected Table with the following values: Total Bookings Total Booking Value Total Trip Distance Then, use a measure to dynamically update the visualizations based on user selection. By Payment Type (Card, Cash, Wallet, etc.) By Trip Type (Day/Night)
+> An end-to-end **Power BI analytics solution** built on **103,700+ Uber trip records** — uncovering booking trends, revenue drivers, location demand, and operational inefficiencies to support data-driven business decisions.
 
-Additional Enhancements: Dynamic Title – Update the chart title based on the selected measure. Slicers – Add filters for Date, City, and other interactive filters for deeper analysis. Tooltips – Show additional details like Average Booking Value or Trip Distance. Vehicle Type Analysis - Grid View in Power BI Create a grid table (matrix or table visual) to analyse key performance indicators like Total Bookings, Total Booking Value, Avg Booking Value, Total Trip Distance across different Vehicle Types in Uber trips. Power BI Implementation: Use a Table or Matrix Visual to display Vehicle Type with the KPIs. Apply Conditional Formatting to highlight high and low values. Enable Sorting & Filtering for user interaction. Total Bookings by Day Detecting trends and fluctuations in daily trip volumes. Identifying peak and off-peak booking days. Understanding the impact of external factors (holidays, events, weather) on ride demand. Supporting strategic planning for resource allocation and pricing adjustments.
+📌 **Built for:** Data Analyst Portfolio | Remote Jobs | Business Intelligence Roles  
+🛠️ **Tools:** Power BI Desktop · Advanced DAX · Power Query · Excel  
+📁 **Dataset:** Kaggle — Uber Trip Data | Date Range: June 2024
 
-Location Analysis Understanding trip locations is crucial for optimizing ride distribution, demand forecasting, and operational efficiency. This analysis focuses on: Most Frequent Pickup Point Identify the most common starting locations for trips. Helps in optimizing driver availability and dynamic pricing strategies. Most Frequent Drop-off Point Find the most common drop-off locations. Requires activating an inactive relationship in Power BI between Pickup Location and Drop-off Location in the data model. Farthest Trip Determine the longest trip based on distance travelled. Useful for analysing outlier trips, long-distance demand, and fare optimization. Total Bookings by Location (Top 5) Identify the top 5 locations with the highest trip bookings. Helps in demand forecasting and optimizing driver availability in high-traffic areas. Most Preferred Vehicle for Location Pickup Determine the most frequently booked vehicle type at each pickup location. Supports strategic vehicle distribution based on customer preferences and location demand Other Implementation Enhancements for Uber Trip Analysis Dashboard Bookmark for Data Details Add a "Data Details" bookmark to display a pop-up or side panel explaining: Meaning of key metrics (Total Bookings, Total Trip Distance, etc.). Description of tables used in the analysis. Data source and refresh frequency. Clear Slicer Button Add a "Clear Filters" button using a blank button with a Reset Slicers action to reset all selections in one click. Improves user experience for quick dashboard resets. Download Raw Data Button Add a button to export raw data in CSV or Excel format. Use Power Automate or built-in Power BI Export functionality. Enables users to analyse raw data outside Power BI if needed.
+---
 
-DAHBOARD 2: TIME ANALYSIS
-To understand trip patterns based on time, Uber needs to analyse ride demand and trends across different time intervals. This dashboard will help in optimizing operations, pricing, and driver availability. Global Dynamic Measure (Filters All Charts) A measure selector will be created for: ✔ Total Bookings ✔ Total Booking Value ✔ Total Trip Distance This dynamic measure will update all visuals based on user selection. Visualizations: By Pickup Time (10-Minute Intervals) - Area Chart Groups trip bookings into 10-minute intervals throughout the day. Helps in identifying peak and off-peak demand periods. By Day Name - Line Chart Shows booking trends across Monday to Sunday. Useful for analysing weekday vs. weekend demand. By Hour and Time - Heatmap (Matrix Grid) Rows: Hours of the Day (0–23) Columns: Days of the Week (Mon-Sun) Values: Selected Dynamic Measure (e.g., Total Bookings) Highlights peak booking hours across different days.
+## 🎯 Business Problem
 
-DAHBOARD 3: DETAILS TAB
-To provide in-depth insights and allow users to explore granular data, a Grid Tab will be created. This tab will enable drill-through functionality, allowing users to access detailed records based on selections made in other dashboards. Features of the Grid Tab: Grid Table with Key Fields: Displays essential trip details Drill-Through Functionality: Users can right-click on a data point from other visuals (e.g., charts, heatmaps) and drill through to this Grid Tab. Displays detailed records related to the selected data point. Bookmark for Full Data View: A "View Full Data" bookmark to toggle between filtered drill-through data and the complete dataset. Allows users to reset filters and see all records easily.
+Uber's operations teams need real-time visibility into:
+- **Which time slots and days** drive peak booking demand?
+- **Which locations** generate the highest trip volumes?
+- **Which vehicle types and payment methods** dominate revenue?
+- **What is the day vs night trip split** for smarter resource planning?
 
-DATA SET : Kaggle
-List the key technologies used to build the dashboard.
-Example: The dashboard was built using the following tools and technologies: • 📊 Power BI Desktop – Main data visualization platform used for report creation. • 📂 Power Query – Data transformation and cleaning layer for reshaping and preparing the data. • 🧠 DAX (Data Analysis Expressions) – Used for calculated measures, dynamic visuals, and conditional logic. • 📝 Data Modeling – Relationships established among tables (resorts, snow, and data_dictionary) to enable cross-filtering and aggregation. • 📁 File Format – .pbix for development and .png for dashboard previews.
+This dashboard answers all four — with interactive drill-through and dynamic KPI switching across 3 dashboards.
 
-SCREENSHORT 1
-https://github.com/SAYLI-28/-UBER-TRIP-PERFORMANCE-AND-BOOKING-ANALYSIS-DASHBOARD/blob/main/UBER%20DASHBOARD%20OVERVIEW.png
+---
 
-SCREENSHORT 2
-https://github.com/SAYLI-28/-UBER-TRIP-PERFORMANCE-AND-BOOKING-ANALYSIS-DASHBOARD/blob/main/UBER%20TRIP%20TIME%20ANALYSIS%20DASHBOARD.png
+## 📊 Real Numbers From This Analysis
 
-SCREENSHORT 3
-https://github.com/SAYLI-28/-UBER-TRIP-PERFORMANCE-AND-BOOKING-ANALYSIS-DASHBOARD/blob/main/UBER%20TRIP%20DETAILS%20DASHBOARD.png
+| KPI | Value |
+|-----|-------|
+| 🚕 Total Bookings | **103,700 trips** |
+| 💰 Total Booking Value | **$1.6 Million** |
+| 💵 Average Booking Value | **$15.0 per trip** |
+| 📍 Total Trip Distance | **349,000 Miles** |
+| 🛣️ Average Trip Distance | **3 Miles** |
+| ⏱️ Average Trip Time | **16 Minutes** |
+| 🏆 Most Frequent Pickup | **Penn Station / Madison Sq West** |
+| 🏁 Most Frequent Drop-off | **Upper East Side North** |
+| 🌙 Night vs Day Split | **60.5% Night** / 39.5% Day |
+| 💳 Top Payment Method | **Uber Pay — 70.74%** of all transactions |
+| 🚙 Most Booked Vehicle | **UberX — 38,744 bookings** |
+| 📏 Farthest Single Trip | **144.1 Miles** (Lower East Side → Crown Heights North) |
 
+---
 
+## 🖥️ Dashboard Screenshots
 
-  
+### Dashboard 1 — Overview Analysis
+*KPI cards, payment breakdown, location intelligence, vehicle type grid*
+
+![Overview Dashboard](UBER%20DASHBOARD%20OVERVIEW.png)
+
+---
+
+### Dashboard 2 — Time Analysis
+*Pickup time area chart, day-name line chart, Hour × Day booking heatmap*
+
+![Time Analysis Dashboard](UBER%20TRIP%20TIME%20ANALYSIS%20DASHBOARD.png)
+
+---
+
+### Dashboard 3 — Trip Details (Drill-Through)
+*Granular trip-level records — Trip ID, vehicle, payment, distance, location, booking value*
+
+![Trip Details Dashboard](UBER%20TRIP%20DETAILS%20DASHBOARD.png)
+
+---
+
+## 🔢 Key DAX Measures Built
+
+```DAX
+-- Total Revenue (Fare + Surge Fee combined)
+Total Booking Value = 
+    SUM('Trip Details'[fare_amount]) + SUM('Trip Details'[Surge Fee])
+
+-- Average Revenue Per Trip
+Avg Booking Value = 
+    DIVIDE([Total Booking Value], [Total Bookings], BLANK())
+
+-- Average Trip Duration in Minutes
+Avg Trip Time = 
+    AVERAGEX('Trip Details', 
+        DATEDIFF('Trip Details'[Pickup Time], 
+                 'Trip Details'[Drop Off Time], MINUTE))
+
+-- Most Frequent Pickup using TOPN
+Most Frequent Pickup Point = 
+    VAR Pickpoint = TOPN(1, SUMMARIZE('Trip Details', 
+                         'Location Table'[Location]), [Count], DESC)
+    RETURN MAXX(Pickpoint, 'Location Table'[Location])
+
+-- Dynamic KPI title updates all visuals simultaneously
+Title For Pickup Time = 
+    SELECTEDVALUE('Dynamic Measures'[Dynamic Title]) & " By Pickup Time"
+```
+
+> 💡 A **Disconnected Table** powers a measure selector — one slicer dynamically switches ALL charts between Total Bookings / Total Booking Value / Total Trip Distance simultaneously.
+
+---
+
+## 📐 Data Model
+
+```
+Trip Details (Fact Table)
+├── Trip ID, Pickup Time, Drop Off Time
+├── fare_amount, Surge Fee
+├── trip_distance, passenger_count
+├── Vehicle (UberX, Uber Black, Uber Comfort, Uber Green, UberXL)
+├── Payment_type (Uber Pay, Cash, Amazon Pay, Google Pay)
+├── Trip (Day / Night)
+├── PULocationID → Location Table [active relationship]
+└── DOLocationID → Location Table [inactive — USERELATIONSHIP in DAX]
+
+Location Table      →  LocationID, Location, City
+Calendar Table      →  Date, Day Name, Day Num
+Dynamic Measures    →  Disconnected slicer table for KPI switching
+```
+
+---
+
+## ✨ Advanced Features Implemented
+
+| Feature | What It Does |
+|---------|-------------|
+| 🔄 Dynamic Measure Selector | One slicer updates ALL visuals — Bookings / Revenue / Distance |
+| 🔍 Drill-Through | Right-click any data point → jump to granular Trip Details tab |
+| 📍 Inactive Relationship | Drop-off location via `USERELATIONSHIP` in DAX |
+| 🌙 Day/Night Segmentation | 60.5% night vs 39.5% day demand insight |
+| 🗺️ Location Intelligence | TOPN DAX for most frequent pickup & drop-off |
+| 📊 Hour × Day Heatmap | Exact peak booking hours per weekday |
+| 🔖 Bookmarks | Info panel + Clear Filters reset button |
+| ⬇️ Export Button | Download raw data directly from dashboard |
+| 🎨 Conditional Formatting | Highlights high/low values in vehicle KPI grid |
+
+---
+
+## 💡 Business Insights & Recommendations
+
+1. **Night trips dominate at 60.5%** — driver supply and surge pricing should be weighted toward evening/night for revenue maximisation
+2. **Uber Pay leads at 70.74%** — cashless infrastructure is working; incentivise remaining 29% to shift digital
+3. **UberX highest volume (38,744) but avg value flat at $15** across all vehicle types — premium upselling strategy needs a rethink
+4. **Penn Station is the #1 pickup zone** — concentrating driver availability here during peak hours directly increases booking capture rate
+5. **144.1 mile farthest trip signals long-haul demand** — a dedicated long-distance pricing tier could unlock additional revenue segment
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Usage |
+|------|-------|
+| Power BI Desktop | Dashboard development |
+| Power Query (M) | Data cleaning & transformation |
+| DAX | 13+ measures — dynamic, TOPN, USERELATIONSHIP, AVERAGEX |
+| Excel / CSV | Raw data source |
+| Kaggle | Dataset source |
+
+---
+
+## 🚀 How to Open This Project
+
+1. Download the `.pbit` file from this repo
+2. Open **Power BI Desktop** (free from Microsoft)
+3. Connect to your local CSV data source when prompted
+4. All measures, relationships, and dashboards load automatically
+
+> 💡 No Power BI? The dashboard screenshots above show the full analysis.
+
+---
+
+## 👩‍💻 About
+
+Built by **Sayli Markandey** — Junior Data Analyst  
+📧 saylimarkandey@gmail.com  
+🐙 [github.com/SAYLI-28](https://github.com/SAYLI-28)
+
+*Open to remote Data Analyst opportunities globally.*
+
+---
+
+⭐ If this project was useful, consider starring the repo!
